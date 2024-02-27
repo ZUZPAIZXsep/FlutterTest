@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screen/regis/regis_screen.dart';
-import 'package:flutter_application_1/screen/OTP_email/otp_email_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ForgotPass extends StatefulWidget {
-  const ForgotPass({super.key});
+class OTPEmail extends StatefulWidget {
+  const OTPEmail({super.key});
 
   @override
-  State<ForgotPass> createState() => _ForgotPassState();
+  State<OTPEmail> createState() => _OTPEmailState();
 }
 
-class _ForgotPassState extends State<ForgotPass> {
+class _OTPEmailState extends State<OTPEmail> {
   void logHello() {
     print("Hello");
   }
@@ -38,12 +37,7 @@ class _ForgotPassState extends State<ForgotPass> {
                     Column(
                       children: [
                         Text('ระบบได้ส่งรหัสไปยังอีเมล'),
-                        Text(
-                          'Test1@hotmail.com',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(138, 124, 227, 1)),
-                        )
+                        Text('Test1@hotmail.com')
                       ],
                     ),
                     Padding(
@@ -53,10 +47,7 @@ class _ForgotPassState extends State<ForgotPass> {
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => OTPEmail()));
+                        Navigator.pop(context);
                       },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -124,67 +115,26 @@ class _ForgotPassState extends State<ForgotPass> {
                                 SizedBox(
                                   height: 100,
                                 ),
-                                Text('กรุณากรอกชื่อผู้ใช้งานและรหัสผ่าน',
+                                Text('กรุณากรอกรหัสที่ได้รับจากอีเมล',
                                     style: TextStyle(
                                         height: 3,
                                         fontWeight: FontWeight.bold)),
-                                Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10.0),
-                                    color: Colors.white,
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.black.withOpacity(0.2),
-                                        spreadRadius: 2,
-                                        blurRadius: 5,
-                                        offset: Offset(2, 3),
-                                      ),
-                                    ],
-                                  ),
-                                  child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'อีเมล',
-                                      icon: IconButton(
-                                        icon: Image.asset(
-                                            'lib/assets/email.png',
-                                            height: 24,
-                                            width:
-                                                24), // ต้องปรับ path ตามที่ไฟล์อยู่
-                                        onPressed: () {
-                                          // Handle Facebook login
-                                        },
-                                      ),
-                                      border: InputBorder.none,
-                                      contentPadding: EdgeInsets.symmetric(
-                                          vertical: 10, horizontal: 10),
-                                    ),
-                                  ),
-                                ),
-                                Align(
-                                  alignment: Alignment.centerRight,
-                                  child: TextButton(
-                                      onPressed: logHello,
-                                      child: Text(
-                                        'กู้รหัสผ่านด้วยวิธีอื่น',
-                                        style: GoogleFonts.notoSansThai(
-                                            textStyle:
-                                                TextStyle(color: Colors.grey)),
-                                      )),
-                                ),
-                                Divider(
-                                  indent: 60,
-                                  endIndent: 60,
-                                  thickness: 2,
-                                ),
-                                Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    'กรุณากรอกอีเมลของท่านที่ใช้ในการสมัครสมาชิก',
-                                    style: TextStyle(
-                                        fontSize: 10,
-                                        color: Colors.grey[600],
-                                        height: 4.5),
-                                  ),
+                                Row(
+                                  children: [
+                                    Align(
+                                        alignment: Alignment.centerLeft,
+                                        child: Text('อีเมล :  ',
+                                            style: TextStyle(
+                                                height: 3,
+                                                fontWeight: FontWeight.bold))),
+                                    Text(
+                                      'Test1@hotmail.com',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color:
+                                              Color.fromRGBO(138, 124, 227, 1)),
+                                    )
+                                  ],
                                 ),
                                 SizedBox(height: 15),
                                 ElevatedButton(

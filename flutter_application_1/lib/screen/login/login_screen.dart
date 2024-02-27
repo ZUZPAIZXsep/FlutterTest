@@ -144,7 +144,12 @@ class _LoginViewState extends State<LoginView> {
                       ),
                     ),
                     TextButton(
-                        onPressed: logHello,
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ForgotPass()));
+                        },
                         child: Text(
                           'ลืมรหัสผ่าน ?',
                           style: TextStyle(color: Colors.black),

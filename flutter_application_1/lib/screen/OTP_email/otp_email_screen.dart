@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screen/regis/regis_screen.dart';
+import 'package:flutter_application_1/screen/OTP_email/OTPinput.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class OTPEmail extends StatefulWidget {
@@ -10,10 +11,6 @@ class OTPEmail extends StatefulWidget {
 }
 
 class _OTPEmailState extends State<OTPEmail> {
-  void logHello() {
-    print("Hello");
-  }
-
   btnback() {
     return IconButton(
         onPressed: () {
@@ -119,6 +116,10 @@ class _OTPEmailState extends State<OTPEmail> {
                                     style: TextStyle(
                                         height: 3,
                                         fontWeight: FontWeight.bold)),
+                                Container(
+                                    margin:
+                                        EdgeInsets.only(top: 20, bottom: 20),
+                                    child: OTPInput()),
                                 Row(
                                   children: [
                                     Align(
@@ -138,9 +139,7 @@ class _OTPEmailState extends State<OTPEmail> {
                                 ),
                                 SizedBox(height: 15),
                                 ElevatedButton(
-                                  onPressed: () {
-                                    showpopup();
-                                  },
+                                  onPressed: () {},
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,

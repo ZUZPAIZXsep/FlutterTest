@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screen/regis/regis_screen.dart';
 import 'package:flutter_application_1/screen/OTP_email/OTPinput.dart';
+import 'package:flutter_application_1/screen/New_Pass/new_pass.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class OTPEmail extends StatefulWidget {
@@ -33,8 +34,9 @@ class _OTPEmailState extends State<OTPEmail> {
                   children: [
                     Column(
                       children: [
-                        Text('ระบบได้ส่งรหัสไปยังอีเมล'),
-                        Text('Test1@hotmail.com')
+                        Text('ระบบได้ส่งรหัสไปยังอีเมล',
+                            style: GoogleFonts.notoSansThai()),
+                        Text('Test1@hotmail.com', style: GoogleFonts.notoSans())
                       ],
                     ),
                     Padding(
@@ -51,10 +53,11 @@ class _OTPEmailState extends State<OTPEmail> {
                         children: <Widget>[
                           Text(
                             'ยืนยัน',
-                            style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
+                            style: GoogleFonts.notoSansThai(
+                                textStyle: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold)),
                           ),
                         ],
                       ),
@@ -113,9 +116,10 @@ class _OTPEmailState extends State<OTPEmail> {
                                   height: 100,
                                 ),
                                 Text('กรุณากรอกรหัสที่ได้รับจากอีเมล',
-                                    style: TextStyle(
-                                        height: 3,
-                                        fontWeight: FontWeight.bold)),
+                                    style: GoogleFonts.notoSansThai(
+                                        textStyle: TextStyle(
+                                            height: 3,
+                                            fontWeight: FontWeight.bold))),
                                 Container(
                                     margin:
                                         EdgeInsets.only(top: 20, bottom: 20),
@@ -125,31 +129,41 @@ class _OTPEmailState extends State<OTPEmail> {
                                     Align(
                                         alignment: Alignment.centerLeft,
                                         child: Text('อีเมล :  ',
-                                            style: TextStyle(
-                                                height: 3,
-                                                fontWeight: FontWeight.bold))),
+                                            style: GoogleFonts.notoSansThai(
+                                                textStyle: TextStyle(
+                                                    height: 3,
+                                                    fontWeight:
+                                                        FontWeight.bold)))),
                                     Text(
                                       'Test1@hotmail.com',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          color:
-                                              Color.fromRGBO(138, 124, 227, 1)),
+                                      style: GoogleFonts.notoSans(
+                                          textStyle: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: Color.fromRGBO(
+                                                  138, 124, 227, 1))),
                                     )
                                   ],
                                 ),
                                 SizedBox(height: 15),
                                 ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                NewPassword()));
+                                  },
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       Text(
                                         'ถัดไป',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold),
+                                        style: GoogleFonts.notoSansThai(
+                                            textStyle: TextStyle(
+                                                fontSize: 16,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold)),
                                       ),
                                       IconButton(
                                         icon: Image.asset(

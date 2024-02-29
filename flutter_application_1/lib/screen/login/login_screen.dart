@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screen/Forgot_Pass/Forgot_Pass_screen.dart';
 import 'package:flutter_application_1/screen/regis/regis_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -38,27 +39,29 @@ class _LoginViewState extends State<LoginView> {
                     children: [
                       Text(
                         'มูลนิธิรามาธิบดี',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 24,
-                          color: Colors.white,
+                        style: GoogleFonts.notoSansThai(
+                          textStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 24,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                       Text(
                         'ในพระราชูปถัมภ์',
-                        style: TextStyle(
+                        style: GoogleFonts.notoSansThai(
+                            textStyle: TextStyle(
                           color: Colors.white,
-                          fontSize: 11,
-                          fontWeight: FontWeight.bold,
-                        ),
+                          fontSize: 12,
+                        )),
                       ),
                       Text(
                         'สมเด็จพระเทพรัตนราชสุดาฯ สยามบรมราชกุมารี',
-                        style: TextStyle(
+                        style: GoogleFonts.notoSansThai(
+                            textStyle: TextStyle(
                           color: Colors.white,
-                          fontSize: 11,
-                          fontWeight: FontWeight.bold,
-                        ),
+                          fontSize: 12,
+                        )),
                       ),
                     ],
                   ),
@@ -79,7 +82,9 @@ class _LoginViewState extends State<LoginView> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('ชื่อผู้ใช้งาน', style: TextStyle(height: 3)),
+                    Text('ชื่อผู้ใช้งาน',
+                        style: GoogleFonts.notoSansThai(
+                            textStyle: TextStyle(height: 3))),
                     Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
@@ -96,6 +101,7 @@ class _LoginViewState extends State<LoginView> {
                       child: TextFormField(
                         decoration: InputDecoration(
                           hintText: 'ชื่อผู้ใช้งาน',
+                          hintStyle: GoogleFonts.notoSansThai(),
                           icon: IconButton(
                             icon: Image.asset('lib/assets/user.png',
                                 height: 24,
@@ -111,7 +117,9 @@ class _LoginViewState extends State<LoginView> {
                       ),
                     ),
                     SizedBox(height: 20),
-                    Text('รหัสผ่าน', style: TextStyle(height: 3)),
+                    Text('รหัสผ่าน',
+                        style: GoogleFonts.notoSansThai(
+                            textStyle: TextStyle(height: 3))),
                     Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
@@ -129,6 +137,7 @@ class _LoginViewState extends State<LoginView> {
                         obscureText: true,
                         decoration: InputDecoration(
                           hintText: 'รหัสผ่าน',
+                          hintStyle: GoogleFonts.notoSansThai(),
                           icon: IconButton(
                             icon: Image.asset('lib/assets/pass.png',
                                 height: 24,
@@ -150,10 +159,10 @@ class _LoginViewState extends State<LoginView> {
                               MaterialPageRoute(
                                   builder: (context) => ForgotPass()));
                         },
-                        child: Text(
-                          'ลืมรหัสผ่าน ?',
-                          style: TextStyle(color: Colors.black),
-                        )),
+                        child: Text('ลืมรหัสผ่าน ?',
+                            style: GoogleFonts.notoSansThai(
+                              textStyle: TextStyle(color: Colors.black),
+                            ))),
                     SizedBox(height: 15),
                     ElevatedButton(
                       onPressed: () {
@@ -165,13 +174,13 @@ class _LoginViewState extends State<LoginView> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Text(
-                            'เข้าสู่ระบบ',
-                            style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
-                          ),
+                          Text('เข้าสู่ระบบ',
+                              style: GoogleFonts.notoSansThai(
+                                textStyle: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              )),
                           IconButton(
                             icon: Image.asset('lib/assets/arrow.png',
                                 height: 24, width: 24),
@@ -191,11 +200,13 @@ class _LoginViewState extends State<LoginView> {
                     ),
                     Align(
                       alignment: Alignment.center,
-                      child: Text(
-                        'หรือเข้าสู่ระบบด้วย',
-                        style: TextStyle(
-                            fontSize: 10, color: Colors.grey[600], height: 4.5),
-                      ),
+                      child: Text('หรือเข้าสู่ระบบด้วย',
+                          style: GoogleFonts.notoSansThai(
+                            textStyle: TextStyle(
+                                fontSize: 11,
+                                color: Colors.grey[600],
+                                height: 4.5),
+                          )),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -243,13 +254,14 @@ class _LoginViewState extends State<LoginView> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
-                            'คุณยังไม่มีบัญชี RAMA SuperApp?',
-                            style: TextStyle(fontSize: 12),
-                          ),
+                          Text('คุณยังไม่มีบัญชี RAMA SuperApp?',
+                              style: GoogleFonts.notoSansThai(
+                                textStyle: TextStyle(fontSize: 12),
+                              )),
                           TextButton(
                             onPressed: logHello,
-                            child: Text(' ลงทะเบียน'),
+                            child: Text(' ลงทะเบียน',
+                                style: GoogleFonts.notoSansThai()),
                           ),
                         ],
                       ),

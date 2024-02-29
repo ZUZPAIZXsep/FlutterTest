@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class RegisPage extends StatelessWidget {
   @override

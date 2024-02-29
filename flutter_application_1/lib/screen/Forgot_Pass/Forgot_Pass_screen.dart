@@ -125,9 +125,10 @@ class _ForgotPassState extends State<ForgotPass> {
                                   height: 100,
                                 ),
                                 Text('กรุณากรอกชื่อผู้ใช้งานและรหัสผ่าน',
-                                    style: TextStyle(
-                                        height: 3,
-                                        fontWeight: FontWeight.bold)),
+                                    style: GoogleFonts.notoSansThai(
+                                        textStyle: TextStyle(
+                                            height: 3,
+                                            fontWeight: FontWeight.bold))),
                                 Container(
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10.0),
@@ -144,6 +145,7 @@ class _ForgotPassState extends State<ForgotPass> {
                                   child: TextFormField(
                                     decoration: InputDecoration(
                                       hintText: 'อีเมล',
+                                      hintStyle: GoogleFonts.notoSansThai(),
                                       icon: IconButton(
                                         icon: Image.asset(
                                             'lib/assets/email.png',
@@ -179,12 +181,13 @@ class _ForgotPassState extends State<ForgotPass> {
                                 Align(
                                   alignment: Alignment.centerLeft,
                                   child: Text(
-                                    'กรุณากรอกอีเมลของท่านที่ใช้ในการสมัครสมาชิก',
-                                    style: TextStyle(
-                                        fontSize: 10,
-                                        color: Colors.grey[600],
-                                        height: 4.5),
-                                  ),
+                                      'กรุณากรอกอีเมลของท่านที่ใช้ในการสมัครสมาชิก',
+                                      style: GoogleFonts.notoSansThai(
+                                        textStyle: TextStyle(
+                                            fontSize: 12,
+                                            color: Colors.grey[600],
+                                            height: 3),
+                                      )),
                                 ),
                                 SizedBox(height: 15),
                                 ElevatedButton(
@@ -197,10 +200,11 @@ class _ForgotPassState extends State<ForgotPass> {
                                     children: <Widget>[
                                       Text(
                                         'ถัดไป',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold),
+                                        style: GoogleFonts.notoSansThai(
+                                            textStyle: TextStyle(
+                                                fontSize: 16,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold)),
                                       ),
                                       IconButton(
                                         icon: Image.asset(

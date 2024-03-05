@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screen/Forgot_Pass/Forgot_Pass_screen.dart';
 import 'package:flutter_application_1/screen/login/login_screen.dart';
+import 'package:flutter_application_1/screen/Authen_screen/authen_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginView(),
+      home: const AuthenPage(),
     );
   }
 }
